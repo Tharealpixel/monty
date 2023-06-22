@@ -7,7 +7,7 @@
 #define STACK_SIZE 1024
 
 extern int stack[STACK_SIZE];
-extern int top;
+extern int top = -1;
 
 void push(int line_number, const char *argument);
 void pall();
