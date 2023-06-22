@@ -13,7 +13,7 @@ void push(int line_number, const char *argument)
 	int top = -1;
 	int num;
 
-	if (argument == NULL || sscanf(argument, "%d", &num) != 1)
+	if (argument == NULL || kstrtoint(argument, 10, &num) != 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);

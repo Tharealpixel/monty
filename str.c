@@ -8,13 +8,14 @@
  */
 char *_strdup(const char *str)
 {
-    size_t len = strlen(str) + 1;
-    char *cpy = malloc(len);
-    if (cpy == NULL)
-    {
-        fprintf(stderr, "Memory allocation error\n");
-        exit(EXIT_FAILURE);
-    }
-    memcpy(cpy, str, len);
-    return (cpy);
+	size_t len = strlen(str) + 1;
+	char *cpy = malloc(len);
+
+	if (cpy == NULL)
+	{
+		fprintf(stderr, "Memory allocation error\n");
+		exit(EXIT_FAILURE);
+	}
+	memcpy(cpy, str, len);
+	return (cpy);
 }
